@@ -12,3 +12,71 @@
   
 
 }
+.myTable{
+  width: 304px;
+  height: 124px;
+  background-color: yellowgreen;
+}
+#maListeDeChoix{
+ display: grid;
+ position: fixed;
+ right:0px;
+ top: 180px;
+}
+button{
+  width: 300px;
+  height: 120px;
+  border:cyan 2px solid;
+}
+.rock{
+  background-image: url(./images/Rock.jpg);
+  background-size:300px 120px;
+  height: 120px;
+}
+
+.scissors{
+  background-image:url(./images/Scissors.jpg);
+  background-size:300px 120px;
+  height: 120px;
+}
+.paper{
+  background-image: url(./images/Paper.jpg);
+  background-size:300px 170px;
+  height: 170px;
+
+}
+#monChoix{
+  position: relative;
+   top: 50px;
+   right: 100px;
+}
+
+#saListeDeChoix{
+  display: grid;
+  position: fixed;
+  left:0px;
+  top: 180px;
+ }
+
+ .rockRobot{
+   background-image: url(./images/RockR.jpg);
+   background-size:300px 120px;
+   height: 120px;
+ }
+ 
+ .scissorsRobot{
+   background-image:url(./images/ScissorsR.jpg);
+   background-size:300px 120px;
+   height: 120px;
+ }
+ .paperRobot{
+   background-image: url(./images/PaperR.jpg);
+   background-size:300px 170px;
+   height: 170px;
+ 
+ }
+ #sonChoix{
+   position: relative;
+   top: 50px;
+   left: 100px;
+ }

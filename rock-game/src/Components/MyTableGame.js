@@ -1,22 +1,34 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useLayoutEffect } from 'react';
+import { useState,useEffect } from 'react';
 
 
 function MyTableGame() {
-    const [monChoix,setMonChoix]=useState("Hello World")
+    const numPartie=0
+   
     const images=["rockRobot","scissorsRobot","paperRobot"]
-    const myRandomImage= Math.floor(Math.random()*images.length)
+   
+    const[sonChoix,setSonChoix]=useState("hey")
+    const [monChoix,setMonChoix]=useState({monChoix:"monChoix",sonChoix:"sonChoix"})
 
-    const[sonChoix,setSonChoix]=useState("Hey Man")
+    function setJeu(element) {
+        
+        if(numPartie<=4){
+           const robotChoix =()=>{return document.getElementById("sonChoix").className}
+            if (element===robotChoix()) {console.log("egalite  "+element+' '+robotChoix())}else{console.log("pas Egalite  "+element+' '+robotChoix())
+           
+    };
+
+        
+    }}
 
     return(
         <div id="monJeu">
         <div id="maListeDeChoix">
     
-        <button onClick={()=>{setMonChoix("rock");setSonChoix(images[myRandomImage])}} className="rock"/>
-        <button onClick={()=>{setMonChoix("scissors");setSonChoix(images[myRandomImage])}} className="scissors"/>
-        <button onClick={()=>{setMonChoix("paper");setSonChoix(images[myRandomImage])}} className="paper"/>
-        <div id="monChoix" className={monChoix} ></div>
+        <button className="rock" onClick={(e)=>{setMonChoix(monChoix:"rock",sonChoix:{images[Math.floor(Math.random()*images.length)]});setJeu(e.target.className);}}/>
+        <button onClick={(e)=>{setMonChoix(monChoix:"scissors",sonChoix:{images[Math.floor(Math.random()*images.length)]});setJeu(e.target.className);}}  className="scissors"/>
+        <button onClick={(e)=>{setMonChoix(monChoix:"paper",sonChoix:{images[Math.floor(Math.random()*images.length)]});setJeu(e.target.className);}}  className="paper"/>
+        <div id="monChoix" className={monChoix.monChoix} ></div>
         </div>
 
 
@@ -25,7 +37,7 @@ function MyTableGame() {
         <button className="rockRobot"/>
         <button className="scissorsRobot"/>
         <button className="paperRobot"/>
-        <button id="sonChoix" className={sonChoix} />
+        <button  id="sonChoix" className={monChoix.sonChoix}/>
         
         </div>
         </div>

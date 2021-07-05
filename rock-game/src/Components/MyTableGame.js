@@ -17,7 +17,10 @@ function MyTableGame() {
     function setJeu(element) {
     }
 
-    useEffect(()=>{if (monChoix[0]===sonChoix[0]){
+    useEffect(()=>{if(monScore>=5){}
+        
+        
+        if (monChoix[0]===sonChoix[0]){
         
         console.log("EGALITE  ")
     }
@@ -58,7 +61,13 @@ function MyTableGame() {
                 <button className="paper" onClick={(e)=>{setMonChoix("paper");setSonChoix(myRandomImage);setNumPartie(numPartie+1);}} />
                 <div id="monChoix"  className={monChoix} />
             </div>
-            <div id="myResult" className={""}>   {sonScore}  {monScore}   </div>
+            <div id="myResult" className={""}>    
+            <div id="monAvatar" className="monAvatar" style={{width:"500px",height:"500px",backgroundColor:"yellow",fontSize:"70px",}} children={"Score Machine"+sonScore+"  "+"mon Score"+monScore}/>
+            
+            
+            
+            </div>
+           
             <div id="saListeDeChoix">
         
                 <button className="rockRobot"/>

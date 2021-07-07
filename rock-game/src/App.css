@@ -16,7 +16,6 @@
 button{
   width: 300px;
   height: 120px;
-  border:cyan 2px solid;
 }
 .rock{
   background-image: url(./images/Rock.jpg);
@@ -87,59 +86,104 @@ button{
    display: grid;
    position: relative;
    grid-template-columns:15% 70% 15%;
-   background-color: lawngreen;
+   
  }
  #myResult{
    display: grid;
    position: relative;
-   top: 50px;
+   top: 0px;
    grid-template:auto  / 50% 50%;
  }
+.Start{
+    position: relative;
+    height: 150px;
+    width: 200px;
+    left: 250px;
+    background-image: url(./images/Start.gif);
+    
 
+}
+.Start2{
+  position: relative;
+  height: 150px;
+  width: 200px;
+  left: 250px;
+  background-image: url(./images/Start2.gif);
+
+}
  .iAmWinner{
    position: relative;
-   height: 400px;
-   width: 300px;
-   left: 200px;
-   background-image: url(./images/giphy.webp);
+   height: 200px;
+   width: 200px;
+   left: 250px;
+   background-image: url(./images/bigwinnerbaby.gif);
+   
  }
  .iLoose{
   position: relative;
-  height: 400px;
-  width: 400px;
-  left: 150px;
+  height: 200px;
+  width: 200px;
+  left: 250px;
   background-image: url(./images/loose.webp);
 
  }
  .urWinner{
   position: relative;
-  height: 400px;
-  width: 400px;
-  left: 150px;
+  height: 200px;
+  width: 200px;
+  left: 250px;
   background-image: url(./images/wabisabip-wabi.gif);
 
  }
  .youLoose{
   position: relative;
-  height: 400px;
-  width: 400px;
-  left: 150px;
+  height: 200px;
+  width: 200px;
+  left: 250px;
   background-image: url(./images/wabisabip-wabi2.gif);
  }
  .myEgalite{
   position: relative;
-  height: 400px;
-  width: 400px;
-  left: 150px;
+  height: 200px;
+  width: 200px;
+  left: 250px;
   background-image: url(./images/again.webp);
 
  }
  .hisEgalite{
   position: relative;
-  height: 400px;
-  width: 400px;
-  left: 150px;
+  height: 200px;
+  width: 200px;
+  left: 250px;
   background-image: url(./images/againR.gif);
+ }
+ .iAmBigWinner{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  left: 250px;
+  background-image: url(./images/Bigwinner.gif);
+ }
+ .youBigLoose{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  left: 250px;
+  background-image: url(./images/biglooserR.gif);
+ }
+ .iBigLoose{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  left: 250px;
+  background-image: url(./images/bigLooserH.webp);
+ }
+ .urBigWinner{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  left: 250px;
+  background-image: url(./images/BIGwinnerR.gif);
  }
 
  #sonChoix{

@@ -12,17 +12,7 @@
   
 
 }
-.myTable{
-  width: 304px;
-  height: 124px;
-  background-color: yellowgreen;
-}
-#maListeDeChoix{
- display: grid;
- position: fixed;
- right:0px;
- top: 180px;
-}
+
 button{
   width: 300px;
   height: 120px;
@@ -45,11 +35,8 @@ button{
   height: 170px;
 
 }
-#monChoix{
-  position: relative;
-   top: 50px;
-   right: 100px;
-}
+
+/*
 .hey{
   background-color: lawngreen;
 }
@@ -60,6 +47,14 @@ button{
   left:0px;
   top: 180px;
  }
+ 
+#maListeDeChoix{
+ display: grid;
+ position: fixed;
+ right:0px;
+ top: 180px;
+}
+*/
 
  .rockRobot{
    background-image: url(./images/RockR.jpg);
@@ -78,13 +73,81 @@ button{
    height: 170px;
  
  }
- #sonChoix{
+
+
+ /*
+ 
+ .monAvatar{
+  position: absolute;
+  top: 100px;
+  left:30%;
+}
+*/
+ #monJeu{
+   display: grid;
+   position: relative;
+   grid-template-columns:15% 70% 15%;
+   background-color: lawngreen;
+ }
+ #myResult{
+   display: grid;
    position: relative;
    top: 50px;
-   left: 100px;
+   grid-template:auto  / 50% 50%;
  }
- .monAvatar{
-   position: absolute;
-   top: 100px;
-   left:30%;
+
+ .iAmWinner{
+   position: relative;
+   height: 400px;
+   width: 300px;
+   left: 200px;
+   background-image: url(./images/giphy.webp);
  }
+ .iLoose{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  left: 150px;
+  background-image: url(./images/loose.webp);
+
+ }
+ .urWinner{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  left: 150px;
+  background-image: url(./images/wabisabip-wabi.gif);
+
+ }
+ .youLoose{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  left: 150px;
+  background-image: url(./images/wabisabip-wabi2.gif);
+ }
+ .myEgalite{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  left: 150px;
+  background-image: url(./images/again.webp);
+
+ }
+ .hisEgalite{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  left: 150px;
+  background-image: url(./images/againR.gif);
+ }
+
+ #sonChoix{
+  position: relative;
+  left: 200px;
+}
+#monChoix{
+ position: relative;
+ left: 200px;
+  
+}

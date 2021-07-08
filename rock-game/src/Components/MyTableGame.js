@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+
 import { useState,useEffect } from 'react';
 
 
@@ -15,54 +15,42 @@ function MyTableGame() {
    const myRandomImage =images[Math.floor(Math.random()*images.length)]
    const[sonChoix,setSonChoix]=useState("hey")
    
-   
-  
-
-    function setJeu(element) {
-    }
 
     useEffect(()=>{if (monChoix[0]===sonChoix[0]){
         setMyAvatar("myEgalite")
         setHisAvatar("hisEgalite")
-        console.log("EGALITE  ")
     }
     else if (monChoix[0]==="p"&&sonChoix[0]==="r") {
-        setMonScore(monScore+1)
+        setMonScore((monScore)=>(monScore+1))
         setMyAvatar("iAmWinner")
         setHisAvatar("youLoose")
-        console.log("Vous avez gagne, le Paper gagne")
     }
     else if (monChoix[0]==="p"&&sonChoix[0]==="s") {
-        setSonScore(sonScore+1)
+        setSonScore((sonScore)=>(sonScore+1))
         setMyAvatar("iLoose")
         setHisAvatar("urWinner")
-        console.log("Vous avez perdu, the Sissors gagne")
     }
     else if (monChoix[0]==="r"&&sonChoix[0]==="s") {
-        setMonScore(monScore+1)
+        setMonScore((monScore)=>(monScore+1))
         setMyAvatar("iAmWinner")
         setHisAvatar("youLoose")
-        console.log("Vous avez gagne, le Rock gagne")
     }
     else if (monChoix[0]==="r"&&sonChoix[0]==="p") {
-        setSonScore(sonScore+1)
+        setSonScore((sonScore)=>(sonScore+1))
         setMyAvatar("iLoose")
         setHisAvatar("urWinner")
-        console.log("Vous avez perdu, le Paper gagne")
     }
     else if (monChoix[0]==="s"&&sonChoix[0]==="r") {
-        setSonScore(sonScore+1)
+        setSonScore((sonScore)=>(sonScore+1))
         setMyAvatar("iLoose")
         setHisAvatar("urWinner")
-        console.log("Vous avez perdu, le Rock gagne")
     }
     else if (monChoix[0]==="s"&&sonChoix[0]==="p") {
-        setMonScore(monScore+1)
+        setMonScore((monScore)=>monScore+1)
         setMyAvatar("iAmWinner")
         setHisAvatar("youLoose")
-        console.log("Vous avez gagne, This sissors gagne")
-}
-    },[numPartie])
+    }
+},[numPartie,sonChoix,monChoix])
     useEffect(()=>{
     
         if(monScore>=5){
@@ -70,16 +58,16 @@ function MyTableGame() {
             setHisAvatar("youBigLoose")
             setSonScore(0)
             setMonScore(0)
-            setMonScoreF(monScoreF+1)
+            setMonScoreF(()=>(monScoreF+1))
         }
         if(sonScore>=5){
             setMyAvatar("iBigLoose")
             setHisAvatar("urBigWinner")
             setSonScore(0)
             setMonScore(0)
-            setSonScoreF(sonScoreF+1)
+            setSonScoreF(()=>(sonScoreF+1))
         }
-        })
+        },[monScore,sonScore,monScoreF,sonScoreF])
     return(
         <div id="monJeu">
             <div id="saListeDeChoix">
@@ -88,7 +76,7 @@ function MyTableGame() {
             <button className="paperRobot"/>
         </div>
             
-            <div id="myResult" className={""}>
+            <div id="myResult" >
             <div id="sonScoreF" className="sonScoreF" style={{position:"relative",left:"150px",height:"50px",width:"400px",backgroundColor:"lime",fontSize:"30px",}} children={"La Machine a gagne "+sonScoreF+" Match"}/>
             <div id="monScoreF" className="monScoreF" style={{position:"relative",left:"150px",height:"50px",width:"400px",backgroundColor:"lime",fontSize:"30px",}} children={"J ai gagne "+monScoreF+" Match"}/>
             <div id="sonScore" className="sonScore" style={{position:"relative",left:"200px",height:"50px",width:"300px",fontSize:"30px",}} children={"Score Machine "+sonScore}/>
@@ -102,9 +90,9 @@ function MyTableGame() {
             </div>
             <div id="maListeDeChoix">
             
-            <button className="rock" onClick={(e)=>{setMonChoix("rock");setSonChoix(myRandomImage);setNumPartie(numPartie+1);}} />
-            <button className="scissors" onClick={(e)=>{ setMonChoix("scissors");setSonChoix(myRandomImage);setNumPartie(numPartie+1);}} />
-            <button className="paper" onClick={(e)=>{setMonChoix("paper");setSonChoix(myRandomImage);setNumPartie(numPartie+1);}} />
+            <button className="rock" onClick={()=>{setMonChoix("rock");setSonChoix(myRandomImage);setNumPartie(numPartie+1);}} />
+            <button className="scissors" onClick={()=>{ setMonChoix("scissors");setSonChoix(myRandomImage);setNumPartie(numPartie+1);}} />
+            <button className="paper" onClick={()=>{setMonChoix("paper");setSonChoix(myRandomImage);setNumPartie(numPartie+1);}} />
             
         </div>
             
